@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="columns is-desktop">
+  <div class="column"></div>
+  <div class="column is-half-desktop">
+    <h2 class="is-size-3">BigTest Tomcat Instance </h2>
+
+    <form method="post" action="{{ url_for('tom_server') }}">
+      <div class="field">
+        <label class="label" for="servers"> Enter ',' delimited Server name</label>
+        <div class="control">
+          <input name="servers" type="input" class="input" required></input>
+        </div>
+      </div>
+
+
+     <div>
+
+          <input type="submit" value="status" name="status" class="button is-link" />
+
+
+          <input type="submit" value="start"  name="status"  class="button is-link" />
+
+
+          <input type="submit" value="restart"  name="status"  class="button is-link" />
+
+
+          <input type="submit" value="stop"  name="status"  class="button is-link" />
+
+        </div>
+    </form>
+  </div>
+  <div class="column"></div>
+</div>
+
+{% endblock %}
+
